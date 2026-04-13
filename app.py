@@ -4,10 +4,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home_page():
-    print("Flask  Project")
-    print("Auto Reloading")
-
-    return render_template('home.html')
+ 
+    return render_template('home.html',language="Python",project_name="Flask Web Project",number=[1,2,3,4,5,6,7,8,9,10])
 
 @app.route('/about')
 def about_page():
