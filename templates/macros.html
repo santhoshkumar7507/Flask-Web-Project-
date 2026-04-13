@@ -11,3 +11,17 @@
 
 <br><br>
 {% endmacro %}
+
+{% macro card(name, role) %}
+
+<div class="card">
+    <h2>Name: {{name}}</h2>
+    <h2>Role: {{role}}</h2>
+
+    <div>
+        <h1>Projects</h1>
+        {{caller()}}
+    </div>
+</div>
+
+{% endmacro %}
