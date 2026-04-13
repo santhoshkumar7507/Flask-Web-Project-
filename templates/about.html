@@ -1,8 +1,16 @@
 
     {% extends "base.html" %}
+
+    {% import 'macros.html' as element %}
+
     {%  block content %}
+
+    {{element.title("About")}}
     
     <h1>About Page</h1>
+    <p>{{data | lower}}</p>
+
+    <h1>{{number | double}}</h1>
 
     {% endblock %}
     

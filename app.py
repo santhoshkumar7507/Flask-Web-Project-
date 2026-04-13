@@ -10,7 +10,7 @@ def home_page():
 @app.route('/about')
 def about_page():
     print(request.args)
-    return render_template('about.html')
+    return render_template('about.html',data="FRamEwoRk",number=10)
 
 @app.route('/contact')
 @app.route('/contact/<int:id>')
@@ -18,6 +18,10 @@ def contact_page(id=None):
     if id:
         print(id)
     return render_template('contact.html')
+
+@app.template_filter("double")
+def double_number(value):
+    return value * 2
 
 if __name__ == '__main__':
     app.run(port=5000,debug=True)

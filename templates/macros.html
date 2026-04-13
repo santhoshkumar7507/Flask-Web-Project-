@@ -1,0 +1,13 @@
+{% macro title(value) %}
+    <h1>{{value}} page</h1>
+
+
+{% endmacro %}
+
+{% macro input_field(name,type='text',placeholder='') %}
+
+<label for="{{name}}">{{name}}</label>
+<input type="{{type}}" name="{{name}}" id="{{name}}" placeholder="{{placeholder}}">
+
+<br><br>
+{% endmacro %}

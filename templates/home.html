@@ -1,6 +1,12 @@
     
     {% extends "base.html" %}
+
+    {% import 'macros.html' as element %}
+
     {%  block content %}
+
+    {{element.title("Home")}}
+
     <h1>This is Home Page Flask Application</h1>
     <p>Flask is python framework</p>
     <h2>Language : {{language}}</h2>

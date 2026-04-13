@@ -1,8 +1,18 @@
 
     {% extends "base.html" %}
+
+    {% import 'macros.html' as element %}
+
     {%  block content %}
 
-    <h1>Contact Page</h1>
+    {{element.title("Contact")}}
+    <form action="">
+
+    {{element.input_field("username")}}
+    {{element.input_field(name='user password',type='password')}}
+    {{element.input_field(name='full name',placeholder='Enter your full name')}}
+
+    </form>
 
     {% endblock %}
     
